@@ -20,6 +20,7 @@ export type TextInputMaskTypeProp =
     | 'cel-phone'
     | 'datetime'
     | 'custom'
+    | 'percentage'
 
 // Option prop of TextInputMask.
 export interface TextInputMaskOptionProp {
@@ -63,10 +64,10 @@ export interface TextInputMaskProps extends Pick<TextInputProps, Exclude<keyof T
 }
 
 // TextInputMask Component
-export class TextInputMask extends React.Component<TextInputMaskProps> {}
+export class TextInputMask extends React.Component<TextInputMaskProps> { }
 
 // TextMask
-export class TextMask extends React.Component<TextInputMaskProps> {}
+export class TextMask extends React.Component<TextInputMaskProps> { }
 
 // MaskService
 export namespace MaskService {
