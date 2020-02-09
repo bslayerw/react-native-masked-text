@@ -11,7 +11,6 @@ test("1 results 1.00%", () => {
   var mask = new PercentageMask();
   var expected = "1.00%"
   var received = mask.getValue("1");
-  console.log(`received ${received}`)
   expect(received).toBe(expected);
 });
 
