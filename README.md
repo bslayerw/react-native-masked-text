@@ -594,6 +594,53 @@ const unmasked = this.zipCodeField.getRawValue()
 // unmasked: 98765321
 ```
 
+
+### Percentage
+
+Precision: 2
+
+```jsx
+<TextInputMask
+  type={'percentage'}
+  value={this.state.value}
+  onChangeText={text => {
+    this.setState({
+      value: text
+    })
+  }}
+/>
+```
+
+#### Options
+
+| name       | type    | required | default              | description |
+| ---------- | ------- | -------- | -------------------- | ----------- |
+| precision | number | no | `2` | precision after decimal to show and used in calculating the raw value |
+
+#### Methods
+
+You can get the `unmasked` value using the `getRawValue` method:
+
+```jsx
+<TextInputMask
+  type={'percentage'}
+  value={this.state.value}
+  onChangeText={text => {
+    this.setState({
+      value: text
+    })
+  }}
+  // add the ref to a local var
+  ref={(ref) => this.percentageField = ref}
+/>
+
+//...
+
+const unmasked = this.zipCodeField.getRawValue()
+// in the mask: 99.00%
+// unmasked: 99.00
+```
+
 ### ... Utils
 
 #### Including the `rawText` in `onChangeText` [1.12.0+]
